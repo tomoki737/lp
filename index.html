@@ -106,7 +106,7 @@
     /* Problems */
     .problems-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
     }
     .problem-card {
@@ -283,7 +283,7 @@
       color: #475569;
       line-height: 1.8;
     }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; justify-content: flex-start; }
     .skill-tag {
       background: #e2e8f0;
       color: #334155;
@@ -313,8 +313,10 @@
     }
 
     @media (max-width: 600px) {
+      section { padding: 48px 20px; }
       .profile-card { flex-direction: column; }
-      .btn-outline { display: none; }
+      .hero-buttons { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+      .btn-outline { margin-left: 0; }
       .solution-table { font-size: 13px; }
       .solution-table th, .solution-table td { padding: 10px 12px; }
     }
@@ -328,8 +330,10 @@
     <div class="label">業務改善・自動化支援</div>
     <h1>面倒な業務、<br><span>ツールと自動化</span>で片付けます。</h1>
     <p>提案だけでなく、実装まで。<br>中小企業・個人事業主の業務改善を、<br>エンジニアが一気通貫で支援します。</p>
-    <a href="#contact" class="btn">無料ヒアリングを申し込む</a>
-    <a href="#about" class="btn btn-outline">詳しく見る</a>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn">無料ヒアリングを申し込む（60分・無料）</a>
+      <a href="#about" class="btn btn-outline">サービス内容を見る</a>
+    </div>
   </div>
 </section>
 
@@ -403,7 +407,7 @@
         </tr>
         <tr>
           <td>手作業の転記</td>
-          <td><span class="tag">Make / Zapier</span> でツール間連携を自動化</td>
+          <td><span class="tag">Make / Zapier</span>（ノーコード自動化ツール）でツール間連携を自動化</td>
         </tr>
         <tr>
           <td>属人化</td>
